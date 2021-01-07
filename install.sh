@@ -9,6 +9,8 @@ mkdir -p ~/.config/git
 ln -sfn ~/.dotfiles/gitignore_global ~/.config/git/ignore
 ln -sfn ~/.dotfiles/gitconfig ~/.gitconfig
 ln -sfn ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -sfn ~/.dotfiles/jupyter ~/.jupyter
+ln -sfn ~/.dotfiles/ipython ~/.ipython
 
 ./Brewfile.sh
 curl https://sdk.cloud.google.com | bash
@@ -22,5 +24,19 @@ pyenv global $GLOBAL_PYTHON_VERSION
 source ~/.zshrc \
 && pip install -U pip \
 && pip install poetry
+
+# jupyter notebook
+source ~/.zshrc \
+&& pip install jupyter jupyter-contrib-nbextensions \
+&& pip install "nbconvert<=6.0" \
+&& python -c 'from notebook.auth import passwd;print(passwd())' > ~/.jupyter/key
+# Create required directory in case (optional)
+mkdir -p $(jupyter --data-dir)/nbextensions
+# Clone the repository
+pushd $(jupyter --data-dir)/nbextensions
+git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
+# Activate the extension
+jupyter nbextension enable vim_binding/vim_binding
+popd
 
 popd
