@@ -30,6 +30,7 @@ brew install --cask bettertouchtool
 brew install --cask google-japanese-ime
 brew install --cask visual-studio-code
 brew install --cask notion
+brew install --cask slack
 
 # Remove outdated versions
 brew cleanup
