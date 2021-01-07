@@ -14,6 +14,7 @@ brew install jq
 brew install pyenv
 brew install starship
 brew install peco
+brew install gibo
 # kubernetes
 # brew install kubectl
 # brew install krew
