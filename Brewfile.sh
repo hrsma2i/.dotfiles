@@ -13,6 +13,7 @@ brew install direnv
 brew install jq
 brew install pyenv
 brew install starship
+brew install peco
 # kubernetes
 # brew install kubectl
 # brew install krew
