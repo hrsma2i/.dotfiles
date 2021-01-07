@@ -24,6 +24,9 @@ brew install peco
 # java
 # brew install jenv
 
+# c.f., https://qiita.com/b4b4r07/items/3a790fe7e925b4ba14f3
+brew install b4b4r07/tap/gomi
+
 # .dmg with homebrew-cask
 brew install --cask google-chrome
 brew install --cask bettertouchtool

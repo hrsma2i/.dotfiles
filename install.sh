@@ -21,7 +21,6 @@ pyenv global $GLOBAL_PYTHON_VERSION
 
 source ~/.zshrc \
 && pip install -U pip \
-&& pip install trash-cli \
 && pip install poetry
 
 popd
