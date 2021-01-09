@@ -3,3 +3,7 @@
     email = hrs.ma2i@gmail.com
 [init]
 	defaultBranch = main
+	templatedir = ~/.git-templates/secrets
+[secrets]
+	patterns = client_secret
+	patterns = client_id
