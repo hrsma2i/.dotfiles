@@ -15,6 +15,7 @@ brew install pyenv
 brew install starship
 brew install peco
 brew install gibo
+brew install docker
 # kubernetes
 # brew install kubectl
 # brew install krew
@@ -35,6 +36,7 @@ brew install --cask google-japanese-ime
 brew install --cask visual-studio-code
 brew install --cask notion
 brew install --cask slack
+brew install --cask docker
 
 # Remove outdated versions
 brew cleanup
