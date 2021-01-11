@@ -2,6 +2,12 @@
 # ENV
 #---------------------------------------------------------------
 export EDITOR=vim
+# Edit command line with my editor
+# c.f., https://nuclearsquid.com/writings/edit-long-commands/#:~:text=Now%20all%20you%20need%20to,ZSH%20will%20execute%20your%20command.
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
 
 
 #---------------------------------------------------------------
