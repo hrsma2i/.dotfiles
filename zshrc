@@ -115,3 +115,11 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export KUBECTX_INGORE_FZF=1
 alias kc=kubectl
 alias kcx=kubectx
+
+#---------------------------------------------------------------
+# Java
+#---------------------------------------------------------------
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+export PATH="/usr/local/opt/maven@3.3/bin:$PATH"
