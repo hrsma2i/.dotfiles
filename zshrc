@@ -103,12 +103,6 @@ which go > /dev/null && export PATH="$(go env GOPATH)/bin:$PATH"
 
 
 #---------------------------------------------------------------
-# go-swagger
-#---------------------------------------------------------------
-alias swagger="docker run --rm -it -e GOPATH=$GOPATH:/go -v $HOME:$HOME -w $(pwd) quay.io/goswagger/swagger"
-
-
-#---------------------------------------------------------------
 # k8s
 #---------------------------------------------------------------
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
