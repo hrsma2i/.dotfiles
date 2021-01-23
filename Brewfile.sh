@@ -19,6 +19,7 @@ brew install docker
 # kubernetes
 # brew install kubectl
 # brew install krew
+# brew install kubectx
 # brew install kustomize
 # brew install k9s
 # golang
