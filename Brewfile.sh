@@ -12,6 +12,7 @@ brew install tree
 brew install direnv
 brew install jq
 brew install pyenv
+brew install nodenv
 brew install starship
 brew install peco
 brew install gibo
