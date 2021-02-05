@@ -17,13 +17,20 @@ brew install starship
 brew install peco
 brew install gibo
 brew install docker
-# kubernetes
+
+# Kubernetes
 # brew install kubectl
 # brew install krew
 # brew install kubectx
 # brew install kustomize
 # brew install k9s
-# golang
+
+# Terraform
+# brew install tfenv
+# tfenv install $TF_VERSION
+# tfenv use $TF_VERSION
+
+# Golang
 # brew install golang
 # java
 # brew install jenv
