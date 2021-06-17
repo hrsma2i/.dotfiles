@@ -113,3 +113,22 @@ export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export PATH="/usr/local/opt/maven@3.3/bin:$PATH"
+
+#---------------------------------------------------------------
+# gcloud
+#---------------------------------------------------------------
+function gx-complete() {
+    _values $(gcloud projects list | awk '{print $1}')
+}
+function gx() {
+    project="$1"
+    if [ -z "$project" ]; then
+        line=$(gcloud projects list | peco)
+        project=$(echo "${line}" | awk '{print $1}')
+    else
+        line=$(gcloud projects list | grep "$project")
+    fi
+    echo "gcloud config set project \"${project}\""
+    gcloud config set project "${project}"
+}
+compdef gx-complete gx
