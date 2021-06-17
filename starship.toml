@@ -1,0 +1,14 @@
+# https://starship.rs/ja-jp/config/
+
+[kubernetes]
+symbol = "☸️  "
+style = "bold 33"
+disabled = false
+[kubernetes.context_aliases]
+"gke_wear-item-mapping-dev_asia-east1_item-mapping-dev-cluster" = "item-mapping-dev"
+"gke_wear-item-mapping-stg_asia-east1_item-mapping-stg-cluster" = "item-mapping-stg"
+"gke_wear-item-mapping-prd_asia-east1_item-mapping-prd-cluster" = "item-mapping-prd⚠️ "
+
+[gcloud]
+style = "bold 35"
+format = '[$symbol $project(@$domain)(\($region\))]($style) '
