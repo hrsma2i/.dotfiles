@@ -9,12 +9,10 @@ zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 
-
 #---------------------------------------------------------------
 # prompt
 #---------------------------------------------------------------
 eval "$(starship init zsh)"
-
 
 #---------------------------------------------------------------
 # ls & grep aliases
@@ -27,7 +25,6 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
 
 #---------------------------------------------------------------
 # git aliases
@@ -44,7 +41,6 @@ alias pull="git pull"
 alias merge="git merge"
 alias reset="git reset"
 
-
 #---------------------------------------------------------------
 # history
 #---------------------------------------------------------------
@@ -58,20 +54,19 @@ setopt share_history
 
 function peco-select-history() {
     local tac
-    if which tac > /dev/null; then
+    if which tac >/dev/null; then
         tac="tac"
     else
         tac="tail -r"
     fi
-    BUFFER=$(\history -n 1 | \
-        eval $tac | \
+    BUFFER=$(\history -n 1 |
+        eval $tac |
         peco --query "$LBUFFER")
     CURSOR=$#BUFFER
     zle clear-screen
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
-
 
 #---------------------------------------------------------------
 # pyenv
@@ -85,14 +80,12 @@ if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
 #---------------------------------------------------------------
 if command -v nodenv 1>/dev/null 2>&1; then eval "$(nodenv init -)"; fi
 
-
 #---------------------------------------------------------------
 # Poetry
 #---------------------------------------------------------------
-if [ -f $HOME/.poetry/env ];then
-  source $HOME/.poetry/env
+if [ -f $HOME/.poetry/env ]; then
+    source $HOME/.poetry/env
 fi
-
 
 #---------------------------------------------------------------
 # load local .zshrc
@@ -100,12 +93,10 @@ fi
 
 [ -n ~/.local.zshrc ] && source ~/.local.zshrc
 
-
 #---------------------------------------------------------------
 # Go
 #---------------------------------------------------------------
-which go > /dev/null && export PATH="$(go env GOPATH)/bin:$PATH"
-
+which go >/dev/null && export PATH="$(go env GOPATH)/bin:$PATH"
 
 #---------------------------------------------------------------
 # k8s
@@ -113,7 +104,7 @@ which go > /dev/null && export PATH="$(go env GOPATH)/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export KUBECTX_INGORE_FZF=1
 alias kc=kubectl
-alias kcx=kubectx
+alias kcx='kubectx | peco | xargs kubectx'
 
 #---------------------------------------------------------------
 # Java
