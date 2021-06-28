@@ -73,9 +73,10 @@ bindkey '^r' peco-select-history
 #---------------------------------------------------------------
 # pyenv
 #---------------------------------------------------------------
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
+eval "$(pyenv init -)"
 
 #---------------------------------------------------------------
 # nodenv
@@ -104,7 +105,7 @@ which go >/dev/null && export PATH="$(go env GOPATH)/bin:$PATH"
 # k8s
 #---------------------------------------------------------------
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export KUBECTX_INGORE_FZF=1
+# export KUBECTX_INGORE_FZF=1
 alias kc=kubectl
 alias kcx='kubectx | peco | xargs kubectx'
 

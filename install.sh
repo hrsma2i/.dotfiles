@@ -5,6 +5,7 @@ pushd ~/.dotfiles || exit
 
 # symlinks
 ln -sfn ~/.dotfiles/zshrc ~/.zshrc
+ln -sfn ~/.dotfiles/zprofile ~/.zprofile
 mkdir -p ~/.config/git
 ln -sfn ~/.dotfiles/gitignore_global ~/.config/git/ignore
 ln -sfn ~/.dotfiles/gitconfig ~/.gitconfig
