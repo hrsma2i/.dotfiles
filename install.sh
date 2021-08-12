@@ -9,7 +9,6 @@ ln -sfn ~/.dotfiles/zprofile ~/.zprofile
 mkdir -p ~/.config/git
 ln -sfn ~/.dotfiles/gitignore_global ~/.config/git/ignore
 ln -sfn ~/.dotfiles/gitconfig ~/.gitconfig
-ln -sfn ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -sfn ~/.dotfiles/jupyter ~/.jupyter
 ln -sfn ~/.dotfiles/ipython ~/.ipython
 ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
