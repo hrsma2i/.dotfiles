@@ -1,4 +1,14 @@
 #---------------------------------------------------------------
+# compdef, zsh-completions
+#---------------------------------------------------------------
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
+
+#---------------------------------------------------------------
 # ENV
 #---------------------------------------------------------------
 export EDITOR=vim
@@ -94,7 +104,7 @@ fi
 # load local .zshrc
 #---------------------------------------------------------------
 
-[ -n ~/.local.zshrc ] && source ~/.local.zshrc
+[ -e ~/.local.zshrc ] && source ~/.local.zshrc
 
 #---------------------------------------------------------------
 # Go
@@ -113,7 +123,9 @@ alias kcx='kubectx | peco | xargs kubectx'
 # Java
 #---------------------------------------------------------------
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+if command -v jenv > /dev/null; then
+    eval "$(jenv init -)"
+fi
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export PATH="/usr/local/opt/maven@3.3/bin:$PATH"
 
