@@ -123,7 +123,7 @@ alias kcx='kubectx | peco | xargs kubectx'
 # Java
 #---------------------------------------------------------------
 export PATH="$HOME/.jenv/bin:$PATH"
-if command -v jenv > /dev/null; then
+if command -v jenv >/dev/null; then
     eval "$(jenv init -)"
 fi
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
