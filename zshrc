@@ -132,6 +132,7 @@ export PATH="/usr/local/opt/maven@3.3/bin:$PATH"
 #---------------------------------------------------------------
 # gcloud
 #---------------------------------------------------------------
+export CLOUDSDK_PYTHON=$(which python)
 function gx-complete() {
     _values $(gcloud projects list | awk '{print $1}')
 }
