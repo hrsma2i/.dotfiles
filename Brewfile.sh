@@ -31,9 +31,10 @@ brew install docker
 # tfenv use $TF_VERSION
 
 # Golang
-# brew install golang
+brew install golang
 # java
 # brew install jenv
+brew intstall pre-commit
 
 # c.f., https://qiita.com/b4b4r07/items/3a790fe7e925b4ba14f3
 brew install b4b4r07/tap/gomi
