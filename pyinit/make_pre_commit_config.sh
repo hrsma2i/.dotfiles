@@ -11,7 +11,7 @@ repos:
       - id: black
         language_version: python3
   - repo: https://github.com/myint/autoflake
-    rev: $autoflake_v
+    rev: v$autoflake_v
     hooks:
       - id: autoflake
         args:
