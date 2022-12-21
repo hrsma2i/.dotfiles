@@ -96,6 +96,7 @@ if command -v nodenv 1>/dev/null 2>&1; then eval "$(nodenv init -)"; fi
 #---------------------------------------------------------------
 # Poetry
 #---------------------------------------------------------------
+export PATH="$HOME/.local/bin:$PATH"
 if [ -f $HOME/.poetry/env ]; then
     source $HOME/.poetry/env
 fi
