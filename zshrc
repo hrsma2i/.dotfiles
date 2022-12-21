@@ -92,6 +92,7 @@ eval "$(pyenv init -)"
 # nodenv
 #---------------------------------------------------------------
 if command -v nodenv 1>/dev/null 2>&1; then eval "$(nodenv init -)"; fi
+export PATH="$HOME/.nodenv/bin:$PATH"
 
 #---------------------------------------------------------------
 # Poetry
