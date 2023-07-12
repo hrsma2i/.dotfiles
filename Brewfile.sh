@@ -11,12 +11,17 @@ brew install wget
 brew install tree
 brew install direnv
 brew install jq
-brew install pyenv
-brew install nodenv
 brew install starship
 brew install peco
 brew install gibo
 brew install docker
+
+# Python
+brew install pyenv
+brew install pipx
+
+# TypeScript
+# brew install nodenv
 
 # Kubernetes
 # brew install kubectl
@@ -32,8 +37,10 @@ brew install docker
 
 # Golang
 brew install golang
+
 # java
 # brew install jenv
+
 brew install pre-commit
 
 # c.f., https://qiita.com/b4b4r07/items/3a790fe7e925b4ba14f3
