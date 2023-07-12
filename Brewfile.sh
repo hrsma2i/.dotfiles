@@ -36,7 +36,7 @@ brew install pipx
 # tfenv use $TF_VERSION
 
 # Golang
-brew install golang
+# brew install golang
 
 # java
 # brew install jenv
