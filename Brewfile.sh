@@ -34,7 +34,7 @@ brew install docker
 brew install golang
 # java
 # brew install jenv
-brew intstall pre-commit
+brew install pre-commit
 
 # c.f., https://qiita.com/b4b4r07/items/3a790fe7e925b4ba14f3
 brew install b4b4r07/tap/gomi
