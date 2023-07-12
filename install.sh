@@ -14,9 +14,13 @@ ln -sfn ~/.dotfiles/ipython ~/.ipython
 ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 
 ./Brewfile.sh
-curl https://sdk.cloud.google.com | bash
-curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "/tmp/AWSCLIV2.pkg"
-sudo installer -pkg /tmp/AWSCLIV2.pkg -target / # /usr/local/bin/aws
+
+# GCP
+# curl https://sdk.cloud.google.com | bash
+
+# AWS
+# curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "/tmp/AWSCLIV2.pkg"
+# sudo installer -pkg /tmp/AWSCLIV2.pkg -target / # /usr/local/bin/aws
 
 GLOBAL_PYTHON_VERSION=3.6.5
 pyenv install $GLOBAL_PYTHON_VERSION
