@@ -23,6 +23,7 @@ ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 # sudo installer -pkg /tmp/AWSCLIV2.pkg -target / # /usr/local/bin/aws
 
 # Python
+pipx install poetry
 git clone https://github.com/pyenv/pyenv-update.git "$(pyenv root)"/plugins/pyenv-update
 GLOBAL_PYTHON_VERSION=3.6.5
 pyenv install $GLOBAL_PYTHON_VERSION
@@ -30,8 +31,7 @@ pyenv global $GLOBAL_PYTHON_VERSION
 
 # shellcheck disable=SC1091
 source "$HOME"/.zshrc &&
-    pip install -U pip &&
-    pip install poetry
+    pip install -U pip
 
 # jupyter notebook
 # shellcheck disable=SC1091
