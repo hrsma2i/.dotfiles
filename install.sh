@@ -22,6 +22,8 @@ ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 # curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "/tmp/AWSCLIV2.pkg"
 # sudo installer -pkg /tmp/AWSCLIV2.pkg -target / # /usr/local/bin/aws
 
+# Python
+git clone https://github.com/pyenv/pyenv-update.git "$(pyenv root)"/plugins/pyenv-update
 GLOBAL_PYTHON_VERSION=3.6.5
 pyenv install $GLOBAL_PYTHON_VERSION
 pyenv global $GLOBAL_PYTHON_VERSION
