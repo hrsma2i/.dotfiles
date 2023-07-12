@@ -19,6 +19,7 @@ brew install docker
 # Python
 brew install pyenv
 brew install pipx
+pipx ensurepath
 
 # TypeScript
 # brew install nodenv
