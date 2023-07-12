@@ -25,7 +25,7 @@ ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 # Python
 pipx install poetry
 git clone https://github.com/pyenv/pyenv-update.git "$(pyenv root)"/plugins/pyenv-update
-GLOBAL_PYTHON_VERSION=3.6.5
+GLOBAL_PYTHON_VERSION=3.11.4
 pyenv install $GLOBAL_PYTHON_VERSION
 pyenv global $GLOBAL_PYTHON_VERSION
 
