@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eu
 
 # https://ics.media/entry/4682/
 # https://typescript-jp.gitbook.io/deep-dive/nodejs
