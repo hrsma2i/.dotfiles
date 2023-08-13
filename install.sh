@@ -25,4 +25,7 @@ ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 # Python
 ./setup_python.sh
 
+# Node.js
+./setup_nodejs.sh
+
 popd || exit
