@@ -18,4 +18,5 @@ npx tsc --init --rootDir src \
     --module commonjs
 npm install --save-dev ts-node
 npm install --save-dev nodemon
+git init
 gibo dump Node >.gitignore
