@@ -89,12 +89,6 @@ bindkey '^r' peco-select-history
 eval "$(pyenv init -)"
 
 #---------------------------------------------------------------
-# nodenv
-#---------------------------------------------------------------
-if command -v nodenv 1>/dev/null 2>&1; then eval "$(nodenv init -)"; fi
-export PATH="$HOME/.nodenv/bin:$PATH"
-
-#---------------------------------------------------------------
 # Poetry
 #---------------------------------------------------------------
 export PATH="$HOME/.local/bin:$PATH"
@@ -150,3 +144,9 @@ function gx() {
     gcloud config set project "${project}"
 }
 compdef gx-complete gx
+
+#---------------------------------------------------------------
+# Volta (node version manager)
+#---------------------------------------------------------------
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
