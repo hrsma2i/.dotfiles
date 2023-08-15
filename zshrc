@@ -3,10 +3,13 @@
 #---------------------------------------------------------------
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-    autoload -Uz compinit
-    compinit
+    # to distable the insecure directry warning
+    # https://zenn.dev/fujishiro/scraps/ad86d76417909b
+    chmod 755 "$(brew --prefix)"/share
 fi
+
+autoload -Uz compinit
+compinit
 
 #---------------------------------------------------------------
 # ENV

@@ -7,6 +7,11 @@ brew tap homebrew/cask || true
 
 # Packages
 
+# https://zenn.dev/sprout2000/articles/bd1fac2f3f83bc
+brew install zsh-completions
+# Preinstalled git in MacOS is called `Apple Git`, which is not useful.
+# `brew git` has zsh completions.
+brew install git
 brew install wget
 brew install tree
 brew install direnv
