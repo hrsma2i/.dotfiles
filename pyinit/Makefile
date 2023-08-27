@@ -11,7 +11,7 @@ base: .gitignore .flake8 .pre-commit-config.yaml
 
 pyproject.toml: .python-version
 	poetry init
-	poetry add -D flake8 black mypy autoflake
+	poetry add -D black ruff mypy
 
 
 define FLAKE8
