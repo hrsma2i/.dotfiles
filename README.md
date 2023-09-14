@@ -11,7 +11,7 @@
 # インストール
 
 ```sh
-$ curl -sf https://raw.githubusercontent.com/hrsma2i/.dotfiles/master/install.sh | sh -s
+curl -sf https://raw.githubusercontent.com/hrsma2i/.dotfiles/master/install.sh | sh -s
 ```
 
 Google Cloud SDK のインストール時に追加する設定は、 `~/.local.zshrc` に追加してください。
