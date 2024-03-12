@@ -66,6 +66,9 @@ SAVEHIST=1000000
 # share .zshhistory
 setopt inc_append_history
 setopt share_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_save_no_dups
 
 function peco-select-history() {
     local tac
@@ -76,8 +79,6 @@ function peco-select-history() {
     fi
     BUFFER=$(\history -n 1 |
         eval $tac |
-        sort |
-        uniq |
         peco --query "$LBUFFER" |
         sed 's/\\n/\n/g')
     CURSOR=$#BUFFER
