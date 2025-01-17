@@ -1,19 +1,21 @@
 #!/bin/bash
 
-[[ -e ~/.dotfiles ]] || git clone https://github.com/hrsma2i/.dotfiles.git ~/.dotfiles
-pushd ~/.dotfiles || exit
+DOTFILES="$HOME/.dotfiles"
+
+[[ -e "$DOTFILES" ]] || git clone https://github.com/hrsma2i/.dotfiles.git "$DOTFILES"
+pushd "$DOTFILES" || exit
+
+zsh/install.sh
 
 # symlinks
-ln -sfn ~/.dotfiles/zshrc ~/.zshrc
-ln -sfn ~/.dotfiles/zprofile ~/.zprofile
-mkdir -p ~/.config/git
-ln -sfn ~/.dotfiles/gitignore_global ~/.config/git/ignore
-ln -sfn ~/.dotfiles/gitconfig ~/.gitconfig
-ln -sfn ~/.dotfiles/jupyter ~/.jupyter
-ln -sfn ~/.dotfiles/ipython ~/.ipython
-ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
+# mkdir -p ~/.config/git
+# ln -sfn ~/.dotfiles/gitignore_global ~/.config/git/ignore
+# ln -sfn ~/.dotfiles/gitconfig ~/.gitconfig
+# ln -sfn ~/.dotfiles/jupyter ~/.jupyter
+# ln -sfn ~/.dotfiles/ipython ~/.ipython
+# ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 
-./Brewfile.sh
+# ./Brewfile.sh
 
 # GCP
 # curl https://sdk.cloud.google.com | bash
@@ -23,9 +25,9 @@ ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 # sudo installer -pkg /tmp/AWSCLIV2.pkg -target / # /usr/local/bin/aws
 
 # Python
-./setup_python.sh
+# ./setup_python.sh
 
 # Node.js
-./setup_nodejs.sh
+# ./setup_nodejs.sh
 
 popd || exit

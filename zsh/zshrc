@@ -135,8 +135,9 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 #---------------------------------------------------------------
 # load sub zshrcs
 #---------------------------------------------------------------
+DOTFILES="$HOME/.dotfiles"
 setopt null_glob
-for zshrc in "$PROJECT_ROOT"/zsh/zshrc.d/*.zshrc; do
+for zshrc in "$DOTFILES"/zsh/zshrc.d/*.zshrc; do
     source "$zshrc"
 done
 unsetopt null_glob
