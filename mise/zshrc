@@ -1,0 +1,5 @@
+# https://zenn.dev/akineko/articles/8fe959a02cb94b
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+  eval "$(mise activate --shims)"
+fi

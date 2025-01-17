@@ -5,7 +5,9 @@ DOTFILES="$HOME/.dotfiles"
 [[ -e "$DOTFILES" ]] || git clone https://github.com/hrsma2i/.dotfiles.git "$DOTFILES"
 pushd "$DOTFILES" || exit
 
+# brew/install_itself.sh
 zsh/install.sh
+mise/install.sh
 
 # symlinks
 # mkdir -p ~/.config/git
