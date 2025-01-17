@@ -25,7 +25,7 @@ brew install jq
 brew install docker
 # c.f., https://qiita.com/b4b4r07/items/3a790fe7e925b4ba14f3
 brew install b4b4r07/tap/gomi
-brew intsall mise
+brew install mise
 
 # GUI
 brew install google-chrome
