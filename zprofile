@@ -1,4 +1,9 @@
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-eval "$(pyenv init --path)"
+
+PROJECT_ROOT="$HOME/.dotfiles"
+
+setopt null_glob
+for zprofile in "$PROJECT_ROOT"/zsh/zprofile.d/*.zprofile; do
+    source "$zprofile"
+done
+unsetopt null_glob

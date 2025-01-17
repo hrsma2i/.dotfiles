@@ -88,14 +88,6 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 #---------------------------------------------------------------
-# pyenv
-#---------------------------------------------------------------
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-# if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
-eval "$(pyenv init -)"
-
-#---------------------------------------------------------------
 # Poetry
 #---------------------------------------------------------------
 export PATH="$HOME/.local/bin:$PATH"
@@ -135,43 +127,16 @@ export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export PATH="/usr/local/opt/maven@3.3/bin:$PATH"
 
 #---------------------------------------------------------------
-# gcloud
-#---------------------------------------------------------------
-export CLOUDSDK_PYTHON=$(which python)
-function gx-complete() {
-    _values $(gcloud projects list | awk '{print $1}')
-}
-function gx() {
-    project="$1"
-    if [ -z "$project" ]; then
-        line=$(gcloud projects list | peco)
-        project=$(echo "${line}" | awk '{print $1}')
-    else
-        line=$(gcloud projects list | grep "$project")
-    fi
-    echo "gcloud config set project \"${project}\""
-    gcloud config set project "${project}"
-}
-compdef gx-complete gx
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hiroshi.matsui/Downloads/google-cloud-sdk/path.zsh.inc' ]; then
-    . '/Users/hiroshi.matsui/Downloads/google-cloud-sdk/path.zsh.inc'
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/hiroshi.matsui/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then
-    . '/Users/hiroshi.matsui/Downloads/google-cloud-sdk/completion.zsh.inc'
-fi
-
-#---------------------------------------------------------------
 # Volta (node version manager)
 #---------------------------------------------------------------
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hiroshi.matsui/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hiroshi.matsui/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/hiroshi.matsui/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hiroshi.matsui/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+#---------------------------------------------------------------
+# load sub zshrcs
+#---------------------------------------------------------------
+setopt null_glob
+for zshrc in "$PROJECT_ROOT"/zsh/zshrc.d/*.zshrc; do
+    source "$zshrc"
+done
+unsetopt null_glob

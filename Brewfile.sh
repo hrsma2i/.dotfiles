@@ -22,7 +22,6 @@ brew install gibo
 brew install docker
 
 # Python
-brew install pyenv
 brew install pipx
 pipx ensurepath
 
