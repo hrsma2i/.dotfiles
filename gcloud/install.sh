@@ -40,6 +40,3 @@ set -x
 ln -sfn ../../gcloud/zprofile zsh/zprofile.d/gcloud.zprofile
 ln -sfn ../../gcloud/zshrc zsh/zshrc.d/gcloud.zshrc
 set +x
-
-# zprofile を再読み込みするためシェルを再起動
-exec $SHELL -l

@@ -8,6 +8,12 @@
 curl -sf https://raw.githubusercontent.com/hrsma2i/.dotfiles/master/install.sh | sh -s
 ```
 
+.zprofile 等を反映させるため
+
+```sh
+exec $SHELL -l
+```
+
 
 ## 特定のツール・設定のインストール
 
@@ -17,4 +23,10 @@ curl -sf https://raw.githubusercontent.com/hrsma2i/.dotfiles/master/install.sh |
 # 例
 ~/.dotfiles/node/install.sh
 ~/.dotfiles/gcloud/install.sh
+```
+
+.zprofile 等を反映させるため
+
+```sh
+exec $SHELL -l
 ```
