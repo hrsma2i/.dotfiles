@@ -9,16 +9,12 @@ brew tap homebrew/cask || true
 
 # https://zenn.dev/sprout2000/articles/bd1fac2f3f83bc
 brew install zsh-completions
-# Preinstalled git in MacOS is called `Apple Git`, which is not useful.
-# `brew git` has zsh completions.
-brew install git
 brew install wget
 brew install tree
 brew install direnv
 brew install jq
 brew install starship
 brew install peco
-brew install gibo
 brew install docker
 
 # Python
@@ -45,8 +41,6 @@ pipx ensurepath
 
 # java
 # brew install jenv
-
-brew install pre-commit
 
 # c.f., https://qiita.com/b4b4r07/items/3a790fe7e925b4ba14f3
 brew install b4b4r07/tap/gomi

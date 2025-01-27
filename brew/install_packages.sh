@@ -12,11 +12,6 @@ brew install zsh-completions
 brew install starship
 brew install peco
 
-# git
-brew install git
-brew install gibo
-brew install pre-commit
-
 # others
 brew install wget
 brew install tree

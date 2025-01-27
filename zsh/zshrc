@@ -42,21 +42,6 @@ alias egrep='egrep --color=auto'
 alias pyinit="make -f "$HOME"/.dotfiles/pyinit/Makefile "
 
 #---------------------------------------------------------------
-# git aliases
-#---------------------------------------------------------------
-alias br="git branch"
-alias co="git checkout"
-alias cob="git checkout -b"
-alias st="git status"
-alias add="git add"
-alias cm="git commit"
-alias amend="git commit --amend"
-alias push="git push"
-alias pull="git pull"
-alias merge="git merge"
-alias reset="git reset"
-
-#---------------------------------------------------------------
 # history
 #---------------------------------------------------------------
 HISTFILE=$HOME/.zsh_history
