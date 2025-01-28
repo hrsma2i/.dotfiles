@@ -30,3 +30,14 @@ exec $SHELL -l
 ```sh
 exec $SHELL -l
 ```
+
+
+## プロジェクトの初期化
+
+特定のツール（例： Python や Go 等）を用いたプロジェクトのリポジトリの初期化をするには以下を実行する。
+
+```sh
+~/.dotfiles/python/init.sh $PROJECT_NAME
+```
+
+なお、 必要なツール（Python や gibo, pre-commit） がなければ init.sh 内でインストールされるので、 **いきなり init.sh してもOK** 。

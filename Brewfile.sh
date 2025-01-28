@@ -17,10 +17,6 @@ brew install starship
 brew install peco
 brew install docker
 
-# Python
-brew install pipx
-pipx ensurepath
-
 # TypeScript
 # brew install nodenv
 

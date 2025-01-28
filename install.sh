@@ -21,9 +21,6 @@ ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 # curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "/tmp/AWSCLIV2.pkg"
 # sudo installer -pkg /tmp/AWSCLIV2.pkg -target / # /usr/local/bin/aws
 
-# Python
-# ./setup_python.sh
-
 # Node.js
 # ./setup_nodejs.sh
 
