@@ -17,9 +17,6 @@ brew install starship
 brew install peco
 brew install docker
 
-# TypeScript
-# brew install nodenv
-
 # Kubernetes
 # brew install kubectl
 # brew install krew
