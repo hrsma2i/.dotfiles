@@ -15,7 +15,6 @@ brew install peco
 # others
 brew install wget
 brew install tree
-brew install direnv
 brew install jq
 brew install docker
 # c.f., https://qiita.com/b4b4r07/items/3a790fe7e925b4ba14f3
