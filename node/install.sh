@@ -1,12 +1,16 @@
 #!/bin/bash -eu
-DOTFILES_DIR="$HOME/.dotfiles"
-pushd "$DOTFILES_DIR" || exit 1
+TOOL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(cd "$TOOL_DIR"/.. && pwd)"
 
-mise/install.sh
+# shellcheck disable=SC1091
+source "$DOTFILES_DIR/shared/install_if_not_exists.sh"
 
-NODE_VERSION=20
+install_node() {
+    NODE_VERSION=20
+    "$DOTFILES_DIR"/mise/install.sh
 
-mise install node@$NODE_VERSION
-mise use -g node@$NODE_VERSION
+    mise install node@$NODE_VERSION
+    mise use -g node@$NODE_VERSION
+}
 
-popd
+install_if_not_exists node install_node
