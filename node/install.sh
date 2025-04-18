@@ -6,7 +6,7 @@ DOTFILES_DIR="$(cd "$TOOL_DIR"/.. && pwd)"
 source "$DOTFILES_DIR/shared/install_if_not_exists.sh"
 
 install_node() {
-    NODE_VERSION=20
+    NODE_VERSION=22
     "$DOTFILES_DIR"/mise/install.sh
 
     mise install node@$NODE_VERSION
