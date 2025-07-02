@@ -81,4 +81,4 @@ Custom Instructions (CLAUDE.md, GEMINI.md, AGENTS.md, .clinerules 等) を書く
 ## Project Catch Up
 
 1. `tree` コマンドを使ったり、多くのファイルを読み込んで、プロジェクトの全体像を把握し、 README.md を上述の「README.md」ルールに従うように作成・編集する。すでに書いてある内容は消さずに、上述のルールに上手く組み込んで残す。
-2. READMD.md に書くべきでないプロジェクト固有のルール、開発フロー、動作確認方法などがあれば、 Custom Insructions を作成・追記する。すでに書いてある内容は消さずに、上述のルールに上手く組み込んで残す。
+2. READMD.md に書くべきでないプロジェクト固有のルール、開発フロー、動作確認方法などがあれば、 Custom Insructions を作成・追記する。すでに書いてある内容は消さずに、上述のルールに上手く組み込んで残す
