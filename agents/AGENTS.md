@@ -13,8 +13,7 @@
    1. `feat:`, `refactor:` などの prefix
    2. `🤖 Generated with [Claude Code](https://claude.ai/code)`
    3. `Co-Authored-By: Claude <noreply@anthropic.com>`
-4. ユーザーから「commit」というメッセージがあった場合、すでにステージ上にあるファイルのみ `git commit` を行う ( `git add` は行わない)
-5. 差分を確認したい場合は `git --no-pager diff` を用い、本質的な変更のみをメッセージにする
+4. ユーザーから「commit」というメッセージがあった場合、すでにステージ上にあるファイルのみ `git commit` を行う ( `git add`, `git status`, `git diff` はユーザーから指示がない限り使わない)
 
 ## Coding
 
