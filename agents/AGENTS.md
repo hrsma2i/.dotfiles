@@ -5,16 +5,6 @@
 1. ユーザーへの返答には日本語を使う。
 2. ユーザーからの返答がないと先に進めないとき（タスク完了の確認やコマンドの実行の許可が必要なとき）は `say` コマンドで呼びかける。
 
-## git commit
-
-1. コミットメッセージは英語を使う
-2. 最初の文字は小文字にする
-3. 1 行に収まる簡潔なメッセージにする。なお、以下のフレーズを書くのは厳禁。
-   1. `feat:`, `refactor:` などの prefix
-   2. `🤖 Generated with [Claude Code](https://claude.ai/code)`
-   3. `Co-Authored-By: Claude <noreply@anthropic.com>`
-4. ユーザーから「commit」というメッセージがあった場合、すでにステージ上にあるファイルのみ `git commit` を行う ( `git add`, `git status`, `git diff` はユーザーから指示がない限り使わない)
-
 ## Coding
 
 1. 差分を小さくする

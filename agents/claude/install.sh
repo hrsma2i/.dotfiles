@@ -18,5 +18,9 @@ install_if_not_exists claude install_claude_code
 mkdir -p ~/.claude
 ln -sfn "$DOTFILES_DIR/agents/AGENTS.md" ~/.claude/CLAUDE.md
 
+# commands ディレクトリを ~/.claude/commands にシンボリックリンク
+ln -sfn "$DOTFILES_DIR/agents/claude/commands" ~/.claude/commands
+
 echo "Claude Code has been installed and configured."
 echo "AGENTS.md has been symlinked to ~/.claude/CLAUDE.md"
+echo "commands directory has been symlinked to ~/.claude/commands"
