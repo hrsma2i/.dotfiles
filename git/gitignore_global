@@ -2,5 +2,6 @@
 .DS_Store
 .vscode
 secrets
+.env.secret
 
 **/.claude/settings.local.json
