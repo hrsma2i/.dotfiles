@@ -58,3 +58,9 @@ Custom Instructions (CLAUDE.md, GEMINI.md, AGENTS.md, .clinerules 等) を書く
 
 1. タスクに依存しない汎用的な指示やルールがユーザーから与えられた場合、 CLAUDE.md に追記するか確認する。
 2. README.md と Custom Instructions で内容を重複させない。README.md に書くべきことは README.md に書き、 Custom Instructions には書かない。
+
+## Web Search
+
+### GitHub
+
+GitHub の URL が与えられた場合、 `gh` コマンドを使ってソースコードを探索・参照する。
