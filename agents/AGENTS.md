@@ -58,17 +58,3 @@ Custom Instructions (CLAUDE.md, GEMINI.md, AGENTS.md, .clinerules 等) を書く
 
 1. タスクに依存しない汎用的な指示やルールがユーザーから与えられた場合、 CLAUDE.md に追記するか確認する。
 2. README.md と Custom Instructions で内容を重複させない。README.md に書くべきことは README.md に書き、 Custom Instructions には書かない。
-
-## Project Catch Up
-
-以下のいずれかの条件のとき、後述の「キャッチアップ手順」を行う。
-
-### 条件
-
-1.  READMD.md が上述の「READ.md」ルールに従ってないとき
-2.  自身が読み込める Custom Instructions のファイルが存在しないとき
-
-### キャッチアップ手順
-
-1.  `tree` コマンドを使ったり、多くのファイルを読み込んで、プロジェクトの全体像を把握し、 README.md を上述の「README.md」ルールに従うように作成・編集する。すでに書いてある内容は消さずに、上述のルールに上手く組み込んで残す。
-2.  READMD.md に書くべきでないプロジェクト固有のルール、開発フロー、動作確認方法などがあれば、 Custom Insructions を作成・追記する。すでに書いてある内容は消さずに、上述のルールに上手く組み込んで残す
