@@ -21,3 +21,7 @@ model: inherit
   - デフォルト値は何もしない関数にする
   - async 関数にはしない。非同期処理をしたい場合、呼び出し側で `onPressed: { newValue in Task { await asyncFunc(newValue) }}` のようにする。そうしないと newValue に対して EXC_BAD_ACCESS でクラッシュする。
 - エラーが throw されたとき、 View 側でエラーログを取るだけではなく、 alert 等でユーザーにもエラーを伝える。
+- Clean Architecture の UseCase や DDD の Application Service を作る場合
+  - `DoSomethingUseCase` や `DoSomethingService` のような接頭辞は不要。 `DoSomething` のように動詞・目的語だけでよい。
+  - struct の callAsFunction メソッドにメインの処理を書き、 `DoSomething()()` のように呼べるようにする。 execute メソッドなどは不要。
+- Repository.find するだけのような中身のない UseCase は不要。 Repository.find を直接呼ぶ。
