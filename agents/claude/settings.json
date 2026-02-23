@@ -29,7 +29,11 @@
       "Bash(gh search:*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebSearch"
+      "WebSearch",
+      "Read"
+    ],
+    "deny": [
+      "Read(**/.env.secret)"
     ]
   },
   "hooks": {
