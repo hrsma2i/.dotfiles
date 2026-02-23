@@ -24,7 +24,11 @@ ln -sfn "$TOOL_DIR/commands" ~/.claude/commands
 # agents ディレクトリを ~/.claude/agents にシンボリックリンク
 ln -sfn "$TOOL_DIR/agents" ~/.claude/agents
 
+# settings.json を生成（共通設定 + マシン固有設定をマージ）
+"$TOOL_DIR/sync_settings.sh"
+
 echo "Claude Code has been installed and configured."
 echo "AGENTS.md has been symlinked to ~/.claude/CLAUDE.md"
 echo "commands directory has been symlinked to ~/.claude/commands"
 echo "agents directory has been symlinked to ~/.claude/agents"
+echo "settings.json has been generated from base + local settings"

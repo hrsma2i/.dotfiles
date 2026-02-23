@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754026601297
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.message // \"Notification\"' | say -v Samantha",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.questions[0].question // \"質問があります\"' | say -r 200",
+            "async": true
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|Edit|Write|Read|WebFetch|WebSearch|Task|Glob|Grep|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_name // \"Tool\"' | xargs -I{} say -v Samantha 'Permission requested for {}'",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say -v Samantha 'Ready for input'",
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}
