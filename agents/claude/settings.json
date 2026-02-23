@@ -30,7 +30,9 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebSearch",
-      "Read"
+      "Read",
+      "Edit",
+      "Write"
     ],
     "deny": [
       "Read(**/.env.secret)"
