@@ -1,8 +1,6 @@
 ---
-name: ios-swiftui
+name: swiftui-ios
 description: iOS SwiftUI アプリの開発タスク。View 実装、画面遷移、エラーハンドリング等を SharedUtils ライブラリでガイドする。
-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch
-model: inherit
 ---
 
 ## 実装ガイドライン
