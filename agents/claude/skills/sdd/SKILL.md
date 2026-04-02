@@ -1,6 +1,6 @@
 ---
+name: sdd
 description: Spec-Driven Development - 仕様書を先に書いてから実装する
-argument-hint: [機能名/ファイルパス（オプション）]
 ---
 
 Spec-Driven Development のアプローチで開発を進めます。

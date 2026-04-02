@@ -1,4 +1,5 @@
 ---
+name: commit
 description: git commit するときに呼ぶ
 ---
 

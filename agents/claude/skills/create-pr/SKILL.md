@@ -1,4 +1,5 @@
 ---
+name: create-pr
 description: PR を作成するときに呼ぶ
 ---
 
