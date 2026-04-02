@@ -1,3 +1,8 @@
+---
+name: md-to-confluence
+description: md ファイルを Confluence に転記するときに呼ぶ
+---
+
 md ファイルを Confluence に転記する際のルール:
 
 - 冒頭に目次マクロを挿入する
