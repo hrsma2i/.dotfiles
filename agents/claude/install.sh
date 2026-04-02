@@ -18,12 +18,6 @@ install_if_not_exists claude install_claude_code
 mkdir -p ~/.claude
 ln -sfn "$DOTFILES_DIR/agents/AGENTS.md" ~/.claude/CLAUDE.md
 
-# commands ディレクトリを ~/.claude/commands にシンボリックリンク
-ln -sfn "$TOOL_DIR/commands" ~/.claude/commands
-
-# agents ディレクトリを ~/.claude/agents にシンボリックリンク
-ln -sfn "$TOOL_DIR/agents" ~/.claude/agents
-
 # rules ディレクトリを ~/.claude/rules にシンボリックリンク
 ln -sfn "$TOOL_DIR/rules" ~/.claude/rules
 
@@ -35,6 +29,6 @@ ln -sfn "$TOOL_DIR/skills" ~/.claude/skills
 
 echo "Claude Code has been installed and configured."
 echo "AGENTS.md has been symlinked to ~/.claude/CLAUDE.md"
-echo "commands directory has been symlinked to ~/.claude/commands"
-echo "agents directory has been symlinked to ~/.claude/agents"
+echo "rules directory has been symlinked to ~/.claude/rules"
+echo "skills directory has been symlinked to ~/.claude/skills"
 echo "settings.json has been generated from base + local settings"
