@@ -57,7 +57,7 @@
 
 Custom Instructions (CLAUDE.md, GEMINI.md, AGENTS.md, .clinerules 等) を書く際は以下のルールに従う。
 
-1. タスクに依存しない汎用的な指示やルールがユーザーから与えられた場合、 CLAUDE.md に追記するか確認する。
+1. 会話を通じて再利用価値のある知識を得た場合（ユーザーから与えられたルール・繰り返し実行したワークフロー・プロジェクト固有の規約・自動化できる作業パターン）、 `/learn` を呼んで保存を提案する。
 2. README.md と Custom Instructions で内容を重複させない。README.md に書くべきことは README.md に書き、 Custom Instructions には書かない。
 
 ## Web Search

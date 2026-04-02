@@ -27,6 +27,9 @@ ln -sfn "$TOOL_DIR/agents" ~/.claude/agents
 # rules ディレクトリを ~/.claude/rules にシンボリックリンク
 ln -sfn "$TOOL_DIR/rules" ~/.claude/rules
 
+# skills ディレクトリを ~/.claude/skills にシンボリックリンク
+ln -sfn "$TOOL_DIR/skills" ~/.claude/skills
+
 # settings.json を生成（共通設定 + マシン固有設定をマージ）
 "$TOOL_DIR/sync_settings.sh"
 
