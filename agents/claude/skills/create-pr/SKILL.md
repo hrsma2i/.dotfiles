@@ -1,5 +1,5 @@
 ---
-description: gh コマンドで PR を作成
+description: PR を作成するときに呼ぶ
 ---
 
 現在のブランチの変更内容から PR を作成します。

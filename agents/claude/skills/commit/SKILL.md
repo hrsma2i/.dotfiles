@@ -1,5 +1,5 @@
 ---
-description: ステージ上のファイルをコミット
+description: git commit するときに呼ぶ
 ---
 
 すでにステージ上にあるファイルのみ git commit を行います。
