@@ -1,7 +1,7 @@
 ---
 description: SKILL.md を編集するときに適用するルール
 paths:
-  - "agents/claude/skills/**/SKILL.md"
+  - "**/SKILL.md"
 ---
 
 SKILL.md を編集する前に https://code.claude.com/docs/ja/skills を取得して仕様を確認し、frontmatter パラメータと文字列置換を可能な限り活用する。
