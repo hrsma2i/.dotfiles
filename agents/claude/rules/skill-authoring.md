@@ -4,7 +4,7 @@ paths:
   - "agents/claude/skills/**/SKILL.md"
 ---
 
-frontmatter パラメータの一覧は公式ドキュメントを参照: https://code.claude.com/docs/ja/skills
+SKILL.md を編集する前に https://code.claude.com/docs/ja/skills を取得して仕様を確認し、frontmatter パラメータと文字列置換を可能な限り活用する。
 
 ## 注意
 

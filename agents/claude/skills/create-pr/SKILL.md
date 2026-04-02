@@ -9,7 +9,7 @@ description: PR を作成するときに呼ぶ
 
 1. PR テンプレートに従う
    - リポジトリの `.github/PULL_REQUEST_TEMPLATE.md` または `.github/pull_request_template.md` を確認
-   - `~/.dotfiles/pull_request_template.md` もコメント含めて参考にする
+   - `${CLAUDE_SKILL_DIR}/pull_request_template.md` もコメント含めて参考にする
 
 2. 過去の PR も参考にする
    - `gh pr list --author=@me --state=all -L 30` で自分の過去 PR を確認
