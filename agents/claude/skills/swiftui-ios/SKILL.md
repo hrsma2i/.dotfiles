@@ -1,6 +1,6 @@
 ---
 name: swiftui-ios
-description: iOS SwiftUI アプリの開発タスク。View 実装、画面遷移、エラーハンドリング等を SharedUtils ライブラリでガイドする。
+description: iOS SwiftUI アプリを開発・実装するときに呼ぶ
 ---
 
 ## SharedUtils
