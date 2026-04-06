@@ -23,6 +23,10 @@ Custom Instructions (CLAUDE.md, GEMINI.md, AGENTS.md, .clinerules 等) を書く
 1. 再利用価値のある知識を得たときは必ず `/learn` を経由する。CLAUDE.md・rules・skills・memory に直接書かない。
 2. README.md と Custom Instructions で内容を重複させない。README.md に書くべきことは README.md に書き、 Custom Instructions には書かない。
 
+## ドキュメント調査
+
+機械が読みにくい形式（HTML・PDF等）のドキュメントがあれば、調査の前に Markdown に変換する。
+
 ## Web Search
 
 ### GitHub
