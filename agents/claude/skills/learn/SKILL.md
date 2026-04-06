@@ -1,6 +1,13 @@
 ---
 name: learn
-description: セッション（会話・調査等）で得た再利用可能な知識を CLAUDE.md / rules / skills / sub-agents に保存・更新する。繰り返しのワークフロー、プロジェクト固有ルール、作業パターンを学習したときに呼ぶ。
+description: >-
+  セッションで得た再利用可能な知識を CLAUDE.md / rules / skills / sub-agents に保存・更新する。
+  TRIGGER when: ユーザーが「覚えて」「learn」「このルール/パターン/ワークフローを保存して」と言った;
+  or 再利用可能なパターン・規約・ワークフローを発見した;
+  or 調査（コードベース探索・ドキュメント読解等）で得た概要やアクセス方法を永続化して再調査を防ぎたい;
+  or 繰り返しの修正・好みが出現しルール化すべき。
+  DO NOT TRIGGER when: 現在のタスクにしか使えない一時的な知識;
+  or 既に CLAUDE.md・rules・skills に存在する情報。
 ---
 
 このセッション（会話・調査等）を振り返り、CLAUDE.md / rules / skills / sub-agents の新規作成・更新を提案する。
