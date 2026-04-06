@@ -25,7 +25,8 @@ Custom Instructions (CLAUDE.md, GEMINI.md, AGENTS.md, .clinerules 等) を書く
 
 ## ドキュメント調査
 
-機械が読みにくい形式（HTML・PDF等）のドキュメントがあれば、調査の前に Markdown に変換する。
+- 調査（コードベース探索・外部ドキュメント読解等）を行ったら、重要なドキュメントの概要とアクセス方法を `/learn` で永続化して次回以降の再調査を防ぐ。
+- 機械が読みにくい形式（HTML・PDF等）のドキュメントがあれば、調査の前に Markdown に変換する。
 
 ## Web Search
 
