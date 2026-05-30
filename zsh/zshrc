@@ -111,3 +111,12 @@ for zshrc in "$DOTFILES"/zsh/zshrc.d/*.zshrc; do
     source "$zshrc"
 done
 unsetopt null_glob
+
+#---------------------------------------------------------------
+# bun
+#---------------------------------------------------------------
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -14,6 +14,9 @@ install_claude_code() {
 
 install_if_not_exists claude install_claude_code
 
+# for bun x ccusage statusline
+"$DOTFILES_DIR/bun/install.sh"
+
 # AGENTS.md を ~/.claude/CLAUDE.md にシンボリックリンク
 mkdir -p ~/.claude
 ln -sfn "$DOTFILES_DIR/agents/AGENTS.md" ~/.claude/CLAUDE.md
