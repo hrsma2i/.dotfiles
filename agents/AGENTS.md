@@ -3,8 +3,7 @@
 ## Conversation
 
 1. ユーザーへの返答には日本語を使う。
-2. ユーザーからの返答がないと先に進めないとき（タスク完了の確認やコマンドの実行の許可が必要なとき）は `say` コマンドで呼びかける。
-3. Bash ツールを呼び出すときは必ず `description` パラメータに日本語でコマンドの目的を書く。省略禁止。
+2. Bash ツールを呼び出すときは必ず `description` パラメータに日本語でコマンドの目的を書く。省略禁止。
 
 ## Coding
 
@@ -16,16 +15,8 @@
 3. コードを数行読めばわかるようなことはコメントはしない。設計理由など、コードを読んだだけじゃわからない場合のみコメントする。
 4. `git` コマンドはカレントディレクトリが対象リポジトリであれば `-C` を付けない
 
-## Custom Instructions
-
-Custom Instructions (CLAUDE.md, GEMINI.md, AGENTS.md, .clinerules 等) を書く際は以下のルールに従う。
-
-1. 再利用価値のある知識を得たときは必ず `/learn` を経由する。CLAUDE.md・rules・skills・memory に直接書かない。
-2. README.md と Custom Instructions で内容を重複させない。README.md に書くべきことは README.md に書き、 Custom Instructions には書かない。
-
 ## ドキュメント調査
 
-- 調査（コードベース探索・外部ドキュメント読解等）を行ったら、重要なドキュメントの概要とアクセス方法を `/learn` で永続化して次回以降の再調査を防ぐ。
 - 機械が読みにくい形式（HTML・PDF等）のドキュメントがあれば、調査の前に Markdown に変換する。
 
 ## Web Search
