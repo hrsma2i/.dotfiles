@@ -30,6 +30,9 @@ ln -sfn "$TOOL_DIR/skills" ~/.claude/skills
 # settings.json を生成（共通設定 + マシン固有設定をマージ）
 "$TOOL_DIR/sync_settings.sh"
 
+# lsmcp: LSP-based code analysis MCP server
+claude mcp add --scope user lsmcp-swift npx -- -y @mizchi/lsmcp --bin=sourcekit-lsp
+
 echo "Claude Code has been installed and configured."
 echo "AGENTS.md has been symlinked to ~/.claude/CLAUDE.md"
 echo "rules directory has been symlinked to ~/.claude/rules"
