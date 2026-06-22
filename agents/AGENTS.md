@@ -15,6 +15,12 @@
 3. コードを数行読めばわかるようなことはコメントはしない。設計理由など、コードを読んだだけじゃわからない場合のみコメントする。
 4. `git` コマンドはカレントディレクトリが対象リポジトリであれば `-C` を付けない
 
+## セキュリティ
+
+- Secret Manager などパスワード・シークレットを取得するコマンドは直接実行しない。必ず環境変数に格納するコマンドを提示する。
+  - 良い例: `export PASSWORD=$(gcloud secrets versions access latest --secret=xxx)`
+  - 悪い例: `gcloud secrets versions access latest --secret=xxx`（値がターミナルに表示される）
+
 ## ドキュメント調査
 
 - 機械が読みにくい形式（HTML・PDF等）のドキュメントがあれば、調査の前に Markdown に変換する。
