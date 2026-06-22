@@ -120,3 +120,10 @@ unsetopt null_glob
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/hiroshi.matsui/.bun/_bun" ] && source "/Users/hiroshi.matsui/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
