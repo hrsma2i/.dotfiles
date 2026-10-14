@@ -10,3 +10,6 @@ zsh/zprofile.d/*
 !zsh/zprofile.d/README.md
 zsh/zshrc.d/*
 !zsh/zshrc.d/README.md
+# ~/.claude/skills は本ディレクトリへの symlink のため、Claude アプリが同期する
+# 組み込みスキル (anthropic-skills: pdf, docx 等) がここに書き出される。自作ではないので追跡しない
+agents/claude/skills/synced/
