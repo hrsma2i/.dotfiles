@@ -32,6 +32,8 @@ exec $SHELL -l
 # 例
 ~/.dotfiles/node/install.sh
 ~/.dotfiles/gcloud/install.sh
+# よく使う CLI・GUI アプリ（Chrome、Slack、Docker Desktop 等）をまとめて Homebrew でインストール
+~/.dotfiles/brew/install_packages.sh
 ```
 
 .zprofile 等を反映させるため

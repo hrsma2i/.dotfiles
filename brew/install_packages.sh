@@ -27,7 +27,7 @@ brew install google-japanese-ime
 brew install visual-studio-code
 brew install notion
 brew install slack
-brew install docker
+brew install docker-desktop
 
 # Remove outdated versions
 brew cleanup

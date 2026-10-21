@@ -11,17 +11,13 @@ mise/install.sh
 git/install.sh
 
 # symlinks
-# ln -sfn ~/.dotfiles/jupyter ~/.jupyter
-# ln -sfn ~/.dotfiles/ipython ~/.ipython
 ln -sfn ~/.dotfiles/starship.toml ~/.config/starship.toml
 
-# ./Brewfile.sh
-
+# マシンごとに要不要が異なるツールをコメントアウトで選ぶ方式は廃止した。
+# 現在は <ツール>/install.sh を個別に実行する（README 参照）。
+# AWS は install.sh を用意するほど使わないため、手順メモとして残している。
 # AWS
 # curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "/tmp/AWSCLIV2.pkg"
 # sudo installer -pkg /tmp/AWSCLIV2.pkg -target / # /usr/local/bin/aws
-
-# Node.js
-# ./setup_nodejs.sh
 
 popd || exit
