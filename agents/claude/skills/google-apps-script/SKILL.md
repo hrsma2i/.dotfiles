@@ -22,8 +22,9 @@ description: "TRIGGER when: Google Apps Script (GAS) のプロジェクトを新
 ## 設定・秘密情報
 
 - 秘密情報はコードに置かず `PropertiesService.getScriptProperties()` から読む。未設定は `throw new Error('スクリプトプロパティ X が未設定です')` で気付けるようにし、任意項目用に例外にしない読み取り関数も用意する。
-- スクリプトプロパティは、必要なキーを洗い出し、`operate-chrome` / Claude in Chrome で Apps Script の「プロジェクトの設定」を開いて、キー名だけを入力した行を事前に追加しておく。値は空のまま保存せず、入力欄を用意したところで止め、ユーザーに値だけを入力して保存してもらう。
+- スクリプトプロパティは、必要なキーを洗い出し、Claude in Chrome で Apps Script の「プロジェクトの設定」を開いて、キー名だけを入力した行を事前に追加しておく。値は空のまま保存せず、入力欄を用意したところで止め、ユーザーに値だけを入力して保存してもらう。
 - 値は自分で入力せず、読み取って会話に出さない（診断出力も ID など最小限にマスクする）。
+- 「プロジェクトの設定」ページでは、chrome-devtools MCP の `take_snapshot` など、ページ全体を出力する操作を使わない（既存プロパティの値が全部出力される）。スクリプトプロパティの操作は Claude in Chrome で行う。
 - `.clasprc.json` / `.clasp.json` / `.env.secret` は git 管理外。
 
 ## Web アプリ（Webhook: LINE 等）
@@ -57,7 +58,7 @@ description: "TRIGGER when: Google Apps Script (GAS) のプロジェクトを新
 
 ## ブラウザ操作が要る作業
 
-- スクリプトプロパティのキー名の事前入力、デプロイ画面、GCP コンソールは Chrome 操作になる。パスワードや秘密値の入力はしない（キー名だけ入れた欄を用意し、値はユーザーに入力してもらう）。`operate-chrome` skill も参照。
+- スクリプトプロパティのキー名の事前入力、デプロイ画面、GCP コンソールは Chrome 操作になる。パスワードや秘密値の入力はしない（キー名だけ入れた欄を用意し、値はユーザーに入力してもらう）。スクリプトプロパティの画面は Claude in Chrome で操作する。
 
 ## 注意
 
