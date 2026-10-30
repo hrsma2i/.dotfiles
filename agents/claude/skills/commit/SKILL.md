@@ -35,5 +35,3 @@ commit 後に、日本語で表にして伝える。列は次の 3 つ。
    - ng: `remove unused variable foo`
 5. 以下のフレーズは厳禁
    - `feat:`, `refactor:` などの prefix
-   - `🤖 Generated with [Claude Code](https://claude.ai/code)`
-   - `Co-Authored-By: Claude <noreply@anthropic.com>`

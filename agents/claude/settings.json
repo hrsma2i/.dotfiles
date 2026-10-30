@@ -12,6 +12,10 @@
     "padding": 0
   },
   "effortLevel": "medium",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "Bash(ls:*)",
