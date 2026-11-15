@@ -1,1 +1,1 @@
-alias screen-off="$HOME/.dotfiles/mac/screen-off.sh"
+alias doff="$HOME/.dotfiles/mac/doff.sh"
