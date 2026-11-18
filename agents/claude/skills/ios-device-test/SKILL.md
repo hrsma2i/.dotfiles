@@ -15,7 +15,10 @@ description: "TRIGGER when: iOS アプリや ShareExtension を実機にビル�
 1. `xcodebuild ... -destination 'id=<実機のUDID>' build 2>&1 | xcbeautify | grep -E "❌|Build Succeeded|BUILD FAILED"` でビルドし、**成否を必ず確認してから**インストールする。
    - `tail` で切ると失敗を見落とし、古いバイナリを実機に入れたまま「新しいコードが動かない」原因調査に時間を溶かす。
 2. `xcrun devicectl device install app --device <UDID> <.app のパス>`
-3. UDID は `xcrun xctrace list devices` の実機の行から取る。CLAUDE.md の destination id が古くて見つからないことがある。
+3. 実機の接続状態は **`xcrun devicectl list devices`** で見る（`State` が `available (paired)` なら使える）。`xcrun xctrace list devices` は、接続済み（ワイヤレス含む）でも `Devices Offline` に出すことがあるので、接続の判断には使わない。`xctrace` で全台オフラインでも「接続されていない」とユーザーに言わず、先に `devicectl` で確かめる。
+   - `devicectl` の表の Identifier は CoreDevice 用の ID。`xcodebuild -destination 'id=...'` に渡す UDID（`0000xxxx-...`）は `xcrun devicectl list devices --json-output <ファイル>` の `hardwareProperties.udid`、または `xctrace` の行から取る（Offline の行でも UDID はそのまま使える）。
+   - 複数台が `available` のときは、推測せず確認する。ユーザーが機種を指定済み、または直前の文脈で決まっていればそれに従う。
+   - CLAUDE.md の destination id が古くて見つからないことがある。
 
 ## ShareExtension を実アプリから起動する
 
