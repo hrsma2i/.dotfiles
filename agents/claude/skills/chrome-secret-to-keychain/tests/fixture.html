@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>fixture</title>
+<h3>Application ID</h3>
+<span>FAKEAPPID1</span>
+<h3>Search API Key</h3>
+<input value="FAKESEARCHKEY0000000000000000000" readonly>
+<h3>Write API Key</h3>
+<button type="button" aria-label="Show/Hide" id="toggle">eye</button>
+<input id="FAKEIDLEAK000000000000000000000" value="" readonly data-masked="1">
+<h3>Analytics API Key</h3>
+<input value="FAKEANALYTICSKEY0000000000000000" readonly>
+<table>
+  <tr><td>FAKEOTHERROWKEY00000000000000000</td><td>Created on</td><td>Other row</td></tr>
+  <tr><td>FAKETABLEKEY00000000000000000000</td><td>Created on</td><td>Table Row Description</td></tr>
+  <tr><td>FAKEBADROWKEY0000000000000000</td><td>Created on</td><td>Bad Row Description</td></tr>
+</table>
+<script>
+  const input = document.querySelector("[data-masked]");
+  const real = "FAKEWRITEKEY00000000000000000000";
+  const hidden = "•".repeat(32);
+  input.value = hidden;
+  document.getElementById("toggle").onclick = () => { input.value = input.value === hidden ? real : hidden; };
+</script>

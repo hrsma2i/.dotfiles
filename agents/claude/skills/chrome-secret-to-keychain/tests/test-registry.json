@@ -1,0 +1,29 @@
+{
+  "fixture-write-key": {
+    "host": "127.0.0.1",
+    "label": "Write API Key",
+    "pattern": "^[A-Za-z0-9]{32}$",
+    "keychainService": "dotfiles-test-chrome-secret",
+    "revealSelector": "button[aria-label='Show/Hide']"
+  },
+  "fixture-write-key-no-reveal": {
+    "host": "127.0.0.1",
+    "label": "Write API Key",
+    "pattern": "^[A-Za-z0-9]{32}$",
+    "keychainService": "dotfiles-test-chrome-secret"
+  },
+  "fixture-table-row": {
+    "host": "127.0.0.1",
+    "label": "Table Row Description",
+    "pattern": "^[A-Za-z0-9]{32}$",
+    "keychainService": "dotfiles-test-chrome-secret",
+    "direction": "before"
+  },
+  "fixture-table-bad-row": {
+    "host": "127.0.0.1",
+    "label": "Bad Row Description",
+    "pattern": "^[A-Za-z0-9]{32}$",
+    "keychainService": "dotfiles-test-chrome-secret",
+    "direction": "before"
+  }
+}
