@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>fixture</title>
+<!-- Apps Script「プロジェクトの設定」を模した偽ページ。値はすべて偽物。保存すると title に行の一覧が入る -->
+<h2>スクリプト プロパティ</h2>
+<button id="edit" aria-label="スクリプト プロパティを編集">編集</button>
+<div id="rows" hidden>
+  <div><input aria-label="プロパティ" value="EXISTING_KEY"><input aria-label="値" value="FAKEEXISTINGVALUE00000000"></div>
+</div>
+<button id="add" aria-label="スクリプト プロパティを追加" hidden>追加</button>
+<button id="save" aria-label="スクリプト プロパティを保存" hidden>保存</button>
+<script>
+  const rows = document.getElementById("rows");
+  document.getElementById("edit").onclick = () => {
+    rows.hidden = false;
+    document.getElementById("add").hidden = false;
+    document.getElementById("save").hidden = false;
+  };
+  document.getElementById("add").onclick = () => {
+    const row = document.createElement("div");
+    row.innerHTML = '<input aria-label="プロパティ"><input aria-label="値">';
+    rows.appendChild(row);
+  };
+  document.getElementById("save").onclick = () => {
+    const inputs = Array.from(rows.querySelectorAll("input"));
+    const pairs = [];
+    for (let i = 0; i < inputs.length; i += 2) pairs.push(inputs[i].value + "=" + inputs[i + 1].value);
+    document.title = "SAVED:" + pairs.join(",");
+  };
+</script>
