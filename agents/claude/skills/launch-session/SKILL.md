@@ -34,7 +34,7 @@ AskUserQuestion の回答を使って起動する。
 
 `--bg` のジョブは既定で、隔離ガードにより main などの共有チェックアウトを編集できない。`launch.sh` は起動前に、作業ディレクトリの `.claude/settings.local.json`（コミット対象外）へ `"worktree": {"bgIsolation": "none"}` を書いてガードを外すので、main で編集・commit できる（commit は試験済み。push は未確認）。
 
-- 記録（jsonl）は作業ディレクトリの保存先に残る。mac で `cd <作業ディレクトリ>` して `/resume` で引き継げる。
+- 記録（jsonl）は作業ディレクトリの保存先に残る。mac で `cd <作業ディレクトリ>` して `/resume` で引き継げるのは、bg が止まったあと（完了または `claude stop`）。
 - main への push は、プロンプトでユーザーが明示したときだけ書く。
 
 ## 起動後
@@ -44,6 +44,7 @@ AskUserQuestion の回答を使って起動する。
   - `claude logs <id>`: 直近の出力
   - `claude attach <id>`: このターミナルで開く
   - `claude stop <id>`: 止める
+- PC で引き継ぐとき: 動いている間は `/resume` できない（「That session is running in the background」のエラーになる）。動いたまま続けるなら `claude attach <id>`。bg を止めて PC 専用にするなら `claude stop <id>` してから `/resume`。`--fork-session` は元の bg と並行して動くので、同じ作業が二重になる。
 - ユーザーへの質問が要る処理は、プロンプトに「AskUserQuestion で聞く」と書くと、iOS アプリに届く。
 
 ## 注意
